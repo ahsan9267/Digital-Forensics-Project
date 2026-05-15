@@ -1,0 +1,553 @@
+==============================================================================
+  FORENSIC EXAMINATION REPORT
+==============================================================================
+  Tool Name                   : Windows Forensic Triage Tool v2.0
+  Generated                   : 2026-05-07 12:46:55 UTC
+  Target Platform             : Windows 11 (live host system)
+  Examiner Username           : USER
+  University                  : Riphah International University
+  Course                      : Digital Forensics — Spring 2026
+  Instructor                  : Sir Hummayun Raza
+
+
+------------------------------------------------------------------------------
+  2. ACQUISITION AND PARSING SUMMARY
+------------------------------------------------------------------------------
+  Total Events Parsed         : 3,164
+
+  Artifact Source             Events  Status
+  ------------------------- --------  --------
+  JumpList                     2,046  OK
+  LNK                            345  OK
+  Prefetch                       507  OK
+  RecycleBin                      88  OK
+  UserAssist                     178  OK
+
+  Correlated Chains           : 38
+  HIGH Priority Chains        : 1
+  Anomalies Detected          : 66
+    CRITICAL Anomalies        : 4
+    HIGH Anomalies            : 8
+  Suspicious Executions       : 50
+    HIGH Risk                 : 5
+    MEDIUM Risk               : 44
+    LOW Risk                  : 1
+  USB Devices Found           : 0
+
+
+------------------------------------------------------------------------------
+  3. SYSTEM ACTIVITY PROFILE
+------------------------------------------------------------------------------
+  Earliest Event              : 2025-05-12
+  Latest Event                : 2639-10-09
+  Most Active Month           : 2026-05 (538 events)
+
+
+------------------------------------------------------------------------------
+  4. TOP 10 MOST-EXECUTED PROGRAMS
+------------------------------------------------------------------------------
+  #    Executable                                        Runs
+  ---- --------------------------------------------- --------
+  1    MSEDGEWEBVIEW2.EXE                                 337
+  2    UEME_CTLSESSION                                    119
+  3    RUNTIMEBROKER.EXE                                   99
+  4    SNIPPINGTOOL.EXE                                    61
+  5    MS-TEAMS.EXE                                        42
+  6    TEXTINPUTHOST.EXE                                   42
+  7    DLLHOST.EXE                                         41
+  8    SEARCHHOST.EXE                                      35
+  9    WINSTORE.APP.EXE                                    35
+  10   LOCKAPP.EXE                                         28
+
+
+------------------------------------------------------------------------------
+  5. DELETED FILES INVENTORY (RECYCLE BIN)
+------------------------------------------------------------------------------
+  Total Deletion Records      : 88
+
+  #    Deletion Time (UTC)           Size  Original Path
+  ---- ----------------------- ----------  ----------------------------------------
+  1    2025-05-18 15:53:10 UTC     2.7 MB  C:\Users\USER\Desktop\New folder
+  2    2025-05-21 13:37:35 UTC       21 B  C:\Users\USER\Desktop\New Text Document.txt
+  3    2025-05-31 05:35:05 UTC    48.6 KB  C:\Users\USER\Downloads\Mid Paper Solution.docx
+  4    2025-06-21 09:47:05 UTC     1.7 MB  C:\Users\USER\Downloads\utorrent-3-6-0-47062.exe
+  5    2025-08-10 17:19:31 UTC     7.2 KB  C:\Users\USER\Desktop\Hidden.jpeg
+  6    2025-08-10 17:19:31 UTC     5.6 MB  C:\Users\USER\Desktop\three_words.jpg
+  7    2025-08-21 10:27:30 UTC    17.5 MB  C:\Users\USER\Downloads\Programs\boot
+  8    2025-08-21 10:27:33 UTC    21.3 MB  C:\Users\USER\Downloads\Programs\efi
+  9    2025-08-21 10:27:37 UTC     4.5 GB  C:\Users\USER\Downloads\Programs\sources
+  10   2025-08-21 10:27:43 UTC   312.9 KB  C:\Users\USER\Downloads\Programs\support
+  11   2025-08-21 10:27:45 UTC      128 B  C:\Users\USER\Downloads\Programs\autorun.inf
+  12   2025-08-21 10:27:48 UTC   404.0 KB  C:\Users\USER\Downloads\Programs\bootmgr
+  13   2025-08-21 10:27:51 UTC     1.5 MB  C:\Users\USER\Downloads\Programs\bootmgr.efi
+  14   2025-08-27 11:20:57 UTC   290.0 KB  C:\Users\USER\Desktop\11.png
+  15   2025-09-10 14:41:33 UTC   559.7 KB  ...-worksheet-for-k-2nd-grade-us-e-1740198857_ver_1.zip
+  16   2025-10-08 14:39:27 UTC   470.5 KB  C:\Users\USER\Desktop\8.png
+  17   2025-11-11 15:51:44 UTC   192.1 KB  C:\Users\USER\Desktop\resume.pdf
+  18   2025-12-07 18:01:22 UTC     2.1 MB  C:\Users\USER\Desktop\SSD PROJECT
+  19   2025-12-09 04:32:10 UTC   125.0 MB  C:\Users\USER\Desktop\MyProjectReportSSD.json
+  20   2025-12-09 04:34:53 UTC      207 B  C:\Users\USER\Desktop\2025-12-09-ZAP-Report-.json
+  21   2025-12-09 04:35:17 UTC     1.1 MB  C:\Users\USER\Desktop\2025-12-09-ZAP-Report-2
+  22   2025-12-09 15:55:23 UTC     3.2 MB  C:\Users\USER\Desktop\SSD PROJECT
+  23   2025-12-17 04:30:53 UTC     4.6 MB  C:\Users\USER\Desktop\DSC02680.JPG
+  24   2026-02-02 13:48:45 UTC   501.1 MB  C:\Users\USER\Downloads\OPNsense-26.1-dvd-amd64.iso
+  25   2026-02-02 14:15:24 UTC   501.1 MB  C:\Users\USER\Downloads\OPNsense-26.1-dvd-amd64.iso.bz2
+  26   2026-02-27 13:59:22 UTC     1.3 MB  C:\Users\USER\OneDrive\Desktop\enp as1 - 51599.docx
+  27   2026-02-27 13:59:26 UTC   512.8 KB  C:\Users\USER\OneDrive\Desktop\enp as1.pdf
+  28   2026-03-07 09:32:06 UTC   486.1 KB  ...rs\USER\OneDrive\Desktop\AI\AI LABS\Assignment 1.pdf
+  29   2026-03-12 17:40:52 UTC    26.5 KB  ...ive\Desktop\VA\WannaCry_Malware_Analysis_Report.docx
+  30   2026-03-12 17:41:01 UTC   319.9 KB  ...eDrive\Desktop\Malware_Analysis_Report_WannaCry.docx
+  31   2026-03-13 04:36:29 UTC     2.1 MB  C:\Users\USER\OneDrive\Desktop\DF\1.1.png
+  32   2026-03-13 04:43:14 UTC   187.0 KB  C:\Users\USER\OneDrive\Desktop\11.png
+  33   2026-03-13 04:43:41 UTC   151.9 KB  C:\Users\USER\OneDrive\Desktop\10.png
+  34   2026-03-13 04:59:23 UTC   110.9 KB  C:\Users\USER\OneDrive\Desktop\7.png
+  35   2026-03-13 05:29:05 UTC    75.8 KB  C:\Users\USER\OneDrive\Desktop\12.png
+  36   2026-04-04 15:52:08 UTC   284.2 KB  C:\Users\USER\OneDrive\Desktop\34.png
+  37   2026-04-04 15:52:09 UTC   236.2 KB  C:\Users\USER\OneDrive\Desktop\33.png
+  38   2026-04-04 15:52:10 UTC   239.5 KB  C:\Users\USER\OneDrive\Desktop\32.png
+  39   2026-04-10 07:53:20 UTC   870.2 MB  C:\Users\USER\OneDrive\Desktop\IDS PROJECT
+  40   2026-04-13 15:20:52 UTC   128.8 MB  ..._project\datasets\Tuesday-WorkingHours.pcap_ISCX.csv
+  41   2026-04-13 15:20:52 UTC    73.3 MB  ...Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+  42   2026-04-13 15:20:52 UTC    73.6 MB  ...ets\Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+  43   2026-04-13 15:20:52 UTC    55.6 MB  ...t\datasets\Friday-WorkingHours-Morning.pcap_ISCX.csv
+  44   2026-04-13 15:20:52 UTC   214.7 MB  ...roject\datasets\Wednesday-workingHours.pcap_ISCX.csv
+  45   2026-04-13 15:20:59 UTC    43.4 KB  ...s\USER\OneDrive\Desktop\ids_project\real_time_ids.py
+  46   2026-04-13 15:20:59 UTC    22.8 KB  ...ers\USER\OneDrive\Desktop\ids_project\train_model.py
+  47   2026-04-26 11:45:46 UTC     6.8 MB  ...Drive\Desktop\task7 DF\Digital_Forensics_Report.docx
+  48   2026-04-26 11:50:58 UTC     8.3 MB  ...\OneDrive\Desktop\Digital_Forensics_Report_lab07.pdf
+  49   2026-04-26 12:11:54 UTC   275.4 KB  C:\Users\USER\OneDrive\Desktop\assignment 3.pdf
+  50   2026-04-26 12:11:54 UTC   191.5 KB  C:\Users\USER\OneDrive\Desktop\assignment 4.pdf
+  51   2026-04-26 13:55:59 UTC   263.2 KB  ...\OneDrive\Desktop\55704_AhsanQureshi_Assignment2.pdf
+  52   2026-04-27 16:10:38 UTC     4.5 KB  ...USER\OneDrive\Desktop\ai_lab11_55704_ahsanqureshi.py
+  53   2026-04-27 16:10:45 UTC    25.7 KB  C:\Users\USER\OneDrive\Desktop\Cloud Security.xlsx
+  54   2026-04-30 14:58:32 UTC    44.7 KB  C:\Users\USER\OneDrive\Desktop\DF_Final_Report_v2.docx
+  55   2026-05-01 19:42:08 UTC    14.6 MB  C:\Users\USER\OneDrive\Desktop\DF_Final_Report_v2.docx
+  56   2026-05-01 19:43:39 UTC   128.9 KB  C:\Users\USER\OneDrive\Desktop\DeepDocs_FINAL.docx
+  57   2026-05-02 13:06:56 UTC     4.6 MB  ...ers\USER\OneDrive\Desktop\DeepDocs_PERFECT_FINAL.pdf
+  58   2026-05-03 09:26:23 UTC    54.3 KB  C:\Users\USER\Downloads\SoilScore_24Step_Report.docx
+  59   2026-05-03 14:57:59 UTC   179.5 KB  C:\Users\USER\Downloads\SoilScore_PERFECT_FINAL.docx
+  60   2026-05-03 14:58:00 UTC   108.0 KB  C:\Users\USER\Downloads\SoilScore_CLEAN_FINAL.docx
+  61   2026-05-04 05:48:58 UTC     3.2 MB  C:\Users\USER\OneDrive\Desktop\DF_Report_Final.docx
+  62   2026-05-05 16:04:59 UTC    43.5 KB  ...\OneDrive\Desktop\pdc project\encryption_speedup.png
+  63   2026-05-05 16:04:59 UTC    37.1 KB  ...USER\OneDrive\Desktop\pdc project\load_balancing.png
+  64   2026-05-05 16:09:26 UTC    11.3 KB  ...ers\USER\OneDrive\Desktop\PDC CY - 6 1 (Theory).xlsx
+  65   2026-05-05 16:09:26 UTC    10.3 KB  C:\Users\USER\OneDrive\Desktop\PDC CY - 6 1 (LAB).xlsx
+  66   2026-05-05 16:09:39 UTC   189.5 KB  ...eDrive\Desktop\Semister Project Guidelines - PDC.pdf
+  67   2026-05-05 16:09:52 UTC    26.5 KB  ...eDrive\Desktop\Assignment-4-Intrusion-Detection.docx
+  68   2026-05-05 16:09:54 UTC    30.7 KB  C:\Users\USER\OneDrive\Desktop\VA Assignment 03.docx
+  69   2026-05-05 16:10:03 UTC     3.4 MB  ...s\USER\OneDrive\Desktop\Week-9-Network- Forensic.pdf
+  70   2026-05-05 16:10:05 UTC     2.4 MB  ...ER\OneDrive\Desktop\Network-Digital Forensic-Lab.pdf
+  71   2026-05-05 16:10:08 UTC   123.1 KB  ...rs\USER\OneDrive\Desktop\DeepDocs_MIT24Steps_v5.docx
+  72   2026-05-05 16:10:10 UTC     4.6 MB  ...ers\USER\OneDrive\Desktop\DeepDocs_PERFECT_FINAL.pdf
+  73   2026-05-06 15:11:57 UTC   221.8 KB  C:\Users\USER\Downloads\Minha  omer.jpg
+  74   2026-05-06 15:11:57 UTC    66.4 KB  C:\Users\USER\Downloads\Shehzil Hamza.jpg
+  75   2026-05-06 15:11:57 UTC    59.0 KB  C:\Users\USER\Downloads\Muhammad Zaviyar khan.jpg
+  76   2026-05-06 15:11:57 UTC    71.7 KB  C:\Users\USER\Downloads\Ayesha Siddiqa.jpg
+  77   2026-05-06 15:11:57 UTC    67.9 KB  C:\Users\USER\Downloads\Hafsa Usman.jpg
+  78   2026-05-06 15:11:57 UTC    55.3 KB  C:\Users\USER\Downloads\Manha Ali.jpg
+  79   2026-05-06 15:11:57 UTC    68.3 KB  C:\Users\USER\Downloads\Muhammad Zaviyar Ahsan.jpg
+  80   2026-05-06 15:11:57 UTC    83.8 KB  C:\Users\USER\Downloads\Anaya Naseer.jpg
+  81   2026-05-06 15:11:57 UTC    68.7 KB  C:\Users\USER\Downloads\Muhammad Hassan .jpg
+  82   2026-05-06 15:11:57 UTC     2.7 MB  C:\Users\USER\Downloads\mirha ibrahim.jpg
+  83   2026-05-06 15:11:57 UTC    93.6 KB  C:\Users\USER\Downloads\Daneen.jpg
+  84   2026-05-06 15:11:57 UTC    56.3 KB  C:\Users\USER\Downloads\Hamzah Usman Mir.jpg
+  85   2026-05-06 15:11:57 UTC    60.5 KB  C:\Users\USER\Downloads\Mahnoor Ammad.jpg
+  86   2026-05-06 15:11:57 UTC   202.0 KB  C:\Users\USER\Downloads\Zohair Abdul Samad.jpg
+  87   2026-05-06 15:20:35 UTC     4.1 MB  C:\Users\USER\Downloads\M2 S Front Pages.pdf
+  88   2026-05-06 15:22:06 UTC     4.7 MB  C:\Users\USER\Downloads\M2 S Front Pages.pdf
+
+
+------------------------------------------------------------------------------
+  6. HIGH PRIORITY CORRELATED EVENT CHAINS
+------------------------------------------------------------------------------
+  Chain #38 — 55704_AHSANQURESHI_ASSIGNMENT2.PDF 
+  Significance        : High (Score: 75/100)
+  Confidence          : 45% (Moderate)
+  Sources             : JumpList, RecycleBin
+  Time Range          : 2026-04-26 13:55:59 UTC -> 2026-04-26 13:55:59 UTC
+  Time Window         : N/A
+  Forensic Notes:
+    * Corroborated by 2 independent artifact sources: JumpList, RecycleBin
+    * +25 points: File accessed then deleted (possible evidence tampering)
+
+
+------------------------------------------------------------------------------
+  7. FORENSIC ANOMALY REPORT
+------------------------------------------------------------------------------
+  [CRITICAL] TYPE 4 — Rapid Sequential Deletions
+    Description   : 7 files deleted within 30s starting 2025-08-21 10:27:30 UTC. Files: boot, efi, sources, support, autorun.inf.... Strong ...
+    Recommendation: Check Prefetch for .bat/.cmd/.py scripts executed just before this timestamp. Correlate with UserAssist and Jump Lists.
+
+  [CRITICAL] TYPE 4 — Rapid Sequential Deletions
+    Description   : 7 files deleted within 30s starting 2026-04-13 15:20:52 UTC. Files: Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv, Fr...
+    Recommendation: Check Prefetch for .bat/.cmd/.py scripts executed just before this timestamp. Correlate with UserAssist and Jump Lists.
+
+  [CRITICAL] TYPE 4 — Rapid Sequential Deletions
+    Description   : 5 files deleted within 30s starting 2026-05-05 16:09:26 UTC. Files: PDC CY - 6 1 (Theory).xlsx, PDC CY - 6 1 (LAB).xlsx,...
+    Recommendation: Check Prefetch for .bat/.cmd/.py scripts executed just before this timestamp. Correlate with UserAssist and Jump Lists.
+
+  [CRITICAL] TYPE 4 — Rapid Sequential Deletions
+    Description   : 14 files deleted within 30s starting 2026-05-06 15:11:57 UTC. Files: Shehzil Hamza.jpg, Zohair Abdul Samad.jpg, Muhammad...
+    Recommendation: Check Prefetch for .bat/.cmd/.py scripts executed just before this timestamp. Correlate with UserAssist and Jump Lists.
+
+  [HIGH] TYPE 3 — Silent Execution (No UserAssist Record)
+    Description   : Security/forensic tool 'NPCAP-1.86.EXE' confirmed executed via Prefetch (run count: 3, last: 2026-04-09 05:27:31 UTC) bu...
+    Recommendation: Investigate how this tool was launched. Check command-line execution artifacts and scheduled tasks.
+
+  [HIGH] TYPE 3 — Silent Execution (No UserAssist Record)
+    Description   : Security/forensic tool 'PYTHON3.13.EXE' confirmed executed via Prefetch (run count: 0, last: 2026-05-06 11:34:47 UTC) bu...
+    Recommendation: Investigate how this tool was launched. Check command-line execution artifacts and scheduled tasks.
+
+  [HIGH] TYPE 3 — Silent Execution (No UserAssist Record)
+    Description   : Security/forensic tool 'PYTHON3.9.EXE' confirmed executed via Prefetch (run count: 0, last: 2026-05-06 11:35:39 UTC) but...
+    Recommendation: Investigate how this tool was launched. Check command-line execution artifacts and scheduled tasks.
+
+  [HIGH] TYPE 3 — Silent Execution (No UserAssist Record)
+    Description   : Security/forensic tool 'SPLUNK-POWERSHELL.EXE' confirmed executed via Prefetch (run count: 0, last: 2026-05-06 11:34:48 ...
+    Recommendation: Investigate how this tool was launched. Check command-line execution artifacts and scheduled tasks.
+
+  [HIGH] TYPE 5 — High-Value File Deletion
+    Description   : High-value file deleted: 'real_time_ids.py' (.py) on 2026-04-13 15:20:59 UTC. Size: 44,403 bytes. Files of this type war...
+    Recommendation: Investigate why this .py file was deleted. Attempt file carving from unallocated space if data recovery is needed.
+
+  [HIGH] TYPE 5 — High-Value File Deletion
+    Description   : High-value file deleted: 'train_model.py' (.py) on 2026-04-13 15:20:59 UTC. Size: 23,317 bytes. Files of this type warra...
+    Recommendation: Investigate why this .py file was deleted. Attempt file carving from unallocated space if data recovery is needed.
+
+  [HIGH] TYPE 5 — High-Value File Deletion
+    Description   : High-value file deleted: 'ai_lab11_55704_ahsanqureshi.py' (.py) on 2026-04-27 16:10:38 UTC. Size: 4,613 bytes. Files of ...
+    Recommendation: Investigate why this .py file was deleted. Attempt file carving from unallocated space if data recovery is needed.
+
+  [HIGH] TYPE 5 — High-Value File Deletion
+    Description   : High-value file deleted: 'utorrent-3-6-0-47062.exe' (.exe) on 2025-06-21 09:47:05 UTC. Size: 1,738,960 bytes. Files of t...
+    Recommendation: Investigate why this .exe file was deleted. Attempt file carving from unallocated space if data recovery is needed.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'tuesday-workinghours.pcap_iscx.csv' deleted on 2026-04-13 15:20:52 UTC (135,078,995 bytes) but NO prior access record f...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'mid paper solution.docx' deleted on 2025-05-31 05:35:05 UTC (49,803 bytes) but NO prior access record found in LNK or J...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'autorun.inf' deleted on 2025-08-21 10:27:45 UTC (128 bytes) but NO prior access record found in LNK or Jump List artifa...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'assignment 1.pdf' deleted on 2026-03-07 09:32:06 UTC (497,801 bytes) but NO prior access record found in LNK or Jump Li...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'plant-life-cycle-read-and-sequence-worksheet-for-k-2nd-grade-us-e-1740198857_ver_1.zip' deleted on 2025-09-10 14:41:33 ...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'real_time_ids.py' deleted on 2026-04-13 15:20:59 UTC (44,403 bytes) but NO prior access record found in LNK or Jump Lis...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'opnsense-26.1-dvd-amd64.iso.bz2' deleted on 2026-02-02 14:15:24 UTC (525,403,329 bytes) but NO prior access record foun...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'minha  omer.jpg' deleted on 2026-05-06 15:11:57 UTC (227,163 bytes) but NO prior access record found in LNK or Jump Lis...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : '11.png' deleted on 2026-03-13 04:43:14 UTC (191,538 bytes) but NO prior access record found in LNK or Jump List artifac...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'friday-workinghours-afternoon-portscan.pcap_iscx.csv' deleted on 2026-04-13 15:20:52 UTC (76,906,168 bytes) but NO prio...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'friday-workinghours-afternoon-ddos.pcap_iscx.csv' deleted on 2026-04-13 15:20:52 UTC (77,123,859 bytes) but NO prior ac...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'enp as1 - 51599.docx' deleted on 2026-02-27 13:59:22 UTC (1,327,561 bytes) but NO prior access record found in LNK or J...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : '10.png' deleted on 2026-03-13 04:43:41 UTC (155,503 bytes) but NO prior access record found in LNK or Jump List artifac...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'train_model.py' deleted on 2026-04-13 15:20:59 UTC (23,317 bytes) but NO prior access record found in LNK or Jump List ...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'muhammad zaviyar khan.jpg' deleted on 2026-05-06 15:11:57 UTC (60,373 bytes) but NO prior access record found in LNK or...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'opnsense-26.1-dvd-amd64.iso' deleted on 2026-02-02 13:48:45 UTC (525,403,329 bytes) but NO prior access record found in...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'va assignment 03.docx' deleted on 2026-05-05 16:09:54 UTC (31,418 bytes) but NO prior access record found in LNK or Jum...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'ayesha siddiqa.jpg' deleted on 2026-05-06 15:11:57 UTC (73,467 bytes) but NO prior access record found in LNK or Jump L...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : '34.png' deleted on 2026-04-04 15:52:08 UTC (290,985 bytes) but NO prior access record found in LNK or Jump List artifac...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'bootmgr.efi' deleted on 2025-08-21 10:27:51 UTC (1,574,256 bytes) but NO prior access record found in LNK or Jump List ...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'hafsa usman.jpg' deleted on 2026-05-06 15:11:57 UTC (69,534 bytes) but NO prior access record found in LNK or Jump List...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'friday-workinghours-morning.pcap_iscx.csv' deleted on 2026-04-13 15:20:52 UTC (58,316,725 bytes) but NO prior access re...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : '32.png' deleted on 2026-04-04 15:52:10 UTC (245,276 bytes) but NO prior access record found in LNK or Jump List artifac...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'manha ali.jpg' deleted on 2026-05-06 15:11:57 UTC (56,597 bytes) but NO prior access record found in LNK or Jump List a...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : '11.png' deleted on 2025-08-27 11:20:57 UTC (296,944 bytes) but NO prior access record found in LNK or Jump List artifac...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'hidden.jpeg' deleted on 2025-08-10 17:19:31 UTC (7,371 bytes) but NO prior access record found in LNK or Jump List arti...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'malware_analysis_report_wannacry.docx' deleted on 2026-03-12 17:41:01 UTC (327,607 bytes) but NO prior access record fo...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'digital_forensics_report_lab07.pdf' deleted on 2026-04-26 11:50:58 UTC (8,732,572 bytes) but NO prior access record fou...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'muhammad zaviyar ahsan.jpg' deleted on 2026-05-06 15:11:57 UTC (69,934 bytes) but NO prior access record found in LNK o...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'digital_forensics_report.docx' deleted on 2026-04-26 11:45:46 UTC (7,134,853 bytes) but NO prior access record found in...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'wednesday-workinghours.pcap_iscx.csv' deleted on 2026-04-13 15:20:52 UTC (225,166,395 bytes) but NO prior access record...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'deepdocs_mit24steps_v5.docx' deleted on 2026-05-05 16:10:08 UTC (126,063 bytes) but NO prior access record found in LNK...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'ai_lab11_55704_ahsanqureshi.py' deleted on 2026-04-27 16:10:38 UTC (4,613 bytes) but NO prior access record found in LN...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'load_balancing.png' deleted on 2026-05-05 16:04:59 UTC (38,038 bytes) but NO prior access record found in LNK or Jump L...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'dsc02680.jpg' deleted on 2025-12-17 04:30:53 UTC (4,872,725 bytes) but NO prior access record found in LNK or Jump List...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'anaya naseer.jpg' deleted on 2026-05-06 15:11:57 UTC (85,836 bytes) but NO prior access record found in LNK or Jump Lis...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'muhammad hassan .jpg' deleted on 2026-05-06 15:11:57 UTC (70,368 bytes) but NO prior access record found in LNK or Jump...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'mirha ibrahim.jpg' deleted on 2026-05-06 15:11:57 UTC (2,849,004 bytes) but NO prior access record found in LNK or Jump...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'daneen.jpg' deleted on 2026-05-06 15:11:57 UTC (95,896 bytes) but NO prior access record found in LNK or Jump List arti...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'resume.pdf' deleted on 2025-11-11 15:51:44 UTC (196,731 bytes) but NO prior access record found in LNK or Jump List art...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'assignment 3.pdf' deleted on 2026-04-26 12:11:54 UTC (282,046 bytes) but NO prior access record found in LNK or Jump Li...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'three_words.jpg' deleted on 2025-08-10 17:19:31 UTC (5,897,612 bytes) but NO prior access record found in LNK or Jump L...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'hamzah usman mir.jpg' deleted on 2026-05-06 15:11:57 UTC (57,637 bytes) but NO prior access record found in LNK or Jump...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'myprojectreportssd.json' deleted on 2025-12-09 04:32:10 UTC (131,039,751 bytes) but NO prior access record found in LNK...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'week-9-network- forensic.pdf' deleted on 2026-05-05 16:10:03 UTC (3,522,565 bytes) but NO prior access record found in ...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : '2025-12-09-zap-report-.json' deleted on 2025-12-09 04:34:53 UTC (207 bytes) but NO prior access record found in LNK or ...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : '55704_ahsanqureshi_assignment2.pdf' deleted on 2026-04-26 13:55:59 UTC (269,510 bytes) but NO prior access record found...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'mahnoor ammad.jpg' deleted on 2026-05-06 15:11:57 UTC (61,995 bytes) but NO prior access record found in LNK or Jump Li...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'wannacry_malware_analysis_report.docx' deleted on 2026-03-12 17:40:52 UTC (27,113 bytes) but NO prior access record fou...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'zohair abdul samad.jpg' deleted on 2026-05-06 15:11:57 UTC (206,854 bytes) but NO prior access record found in LNK or J...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'utorrent-3-6-0-47062.exe' deleted on 2025-06-21 09:47:05 UTC (1,738,960 bytes) but NO prior access record found in LNK ...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'assignment 4.pdf' deleted on 2026-04-26 12:11:54 UTC (196,088 bytes) but NO prior access record found in LNK or Jump Li...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 2 — Deletion Without Prior Access Record
+    Description   : 'network-digital forensic-lab.pdf' deleted on 2026-05-05 16:10:05 UTC (2,549,763 bytes) but NO prior access record found...
+    Recommendation: Investigate if the file was created remotely or downloaded and immediately deleted without opening.
+
+  [MEDIUM] TYPE 5 — High-Value File Deletion
+    Description   : High-value file deleted: 'plant-life-cycle-read-and-sequence-worksheet-for-k-2nd-grade-us-e-1740198857_ver_1.zip' (.zip)...
+    Recommendation: Investigate why this .zip file was deleted. Attempt file carving from unallocated space if data recovery is needed.
+
+
+------------------------------------------------------------------------------
+  8. SUSPICIOUS EXECUTION SUMMARY
+------------------------------------------------------------------------------
+  HIGH Risk                   : 5
+  MEDIUM Risk                 : 44
+  LOW Risk                    : 1
+
+  [HIGH  ] BOOTICEx64_2016.06.17_v1.3.4.0.exe
+           Path     : C:\Users\USER\OneDrive\Desktop\DB LAB 2\BOOTICE_2016.06.17_v1.3.4.0\BO
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2026-03-06 03:35:45 UTC
+
+  [HIGH  ] BOOTICEx64.exe
+           Path     : C:\Users\USER\OneDrive\Desktop\DB LAB 2\BOOTICE_v1.3.4.0-1\BOOTICEx64.
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2026-03-06 03:37:02 UTC
+
+  [HIGH  ] HxDSetup.exe
+           Path     : C:\Users\USER\OneDrive\Desktop\DB LAB 2\HxDSetup\HxDSetup.exe
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2026-03-06 03:41:03 UTC
+
+  [HIGH  ] message.exe
+           Path     : C:\Users\USER\OneDrive\Desktop\Assignment 02\Assignment 02\message.exe
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2026-03-27 15:12:45 UTC
+
+  [HIGH  ] VolatilityWorkbench.exe
+           Path     : C:\Users\USER\AppData\Local\Temp\473aa965-f631-4a83-a8e5-4b13e0a5536e_
+           Category : TEMP Directory
+           Note     : Execution from TEMP — primary malware staging location, no persistence needed
+           Source   : UserAssist | Timestamp: 2026-04-08 04:50:34 UTC
+
+  [MEDIUM] python.exe
+           Path     : C:\Users\USER\AppData\Local\Programs\Python\Python313\python.exe
+           Category : AppData Local
+           Note     : Execution from AppData Local — user-writable, no admin required
+           Source   : UserAssist | Timestamp: 2026-04-08 04:49:13 UTC
+
+  [MEDIUM] Windscribe_2.17.9_amd64.exe
+           Path     : C:\Users\USER\Downloads\Programs\Windscribe_2.17.9_amd64.exe
+           Category : Downloads Folder
+           Note     : Execution from Downloads — common delivery location for malicious files
+           Source   : UserAssist | Timestamp: 2025-11-04 17:12:18 UTC
+
+  [MEDIUM] WhatsApp Installer.exe
+           Path     : C:\Users\USER\Desktop\WhatsApp Installer.exe
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2025-11-17 09:37:28 UTC
+
+  [MEDIUM] xampp-windows-x64-8.2.12-0-VS16-installer.exe
+           Path     : C:\Users\USER\Desktop\dfd tool\xampp-windows-x64-8.2.12-0-VS16-install
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2025-12-10 04:45:10 UTC
+
+  [MEDIUM] Miniconda3-latest-Windows-x86_64.exe
+           Path     : C:\Users\USER\Downloads\Miniconda3-latest-Windows-x86_64.exe
+           Category : Downloads Folder
+           Note     : Execution from Downloads — common delivery location for malicious files
+           Source   : UserAssist | Timestamp: 2025-11-26 13:43:51 UTC
+
+  [MEDIUM] npcap-1.85.exe
+           Path     : C:\Users\USER\Downloads\npcap-1.85.exe
+           Category : Downloads Folder
+           Note     : Execution from Downloads — common delivery location for malicious files
+           Source   : UserAssist | Timestamp: 2025-11-26 14:36:21 UTC
+
+  [MEDIUM] Wireshark-4.6.1-x64.exe
+           Path     : C:\Users\USER\Downloads\Wireshark-4.6.1-x64.exe
+           Category : Downloads Folder
+           Note     : Execution from Downloads — common delivery location for malicious files
+           Source   : UserAssist | Timestamp: 2025-11-26 15:51:14 UTC
+
+  [MEDIUM] FileZilla_Server_1.12.0_win64-setup.exe
+           Path     : C:\Users\USER\Desktop\dfd tool\FileZilla_Server_1.12.0_win64-setup.exe
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2025-11-28 15:01:46 UTC
+
+  [MEDIUM] ZAP_2_16_1_windows.exe
+           Path     : C:\Users\USER\Desktop\dfd tool\ZAP_2_16_1_windows.exe
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2025-12-09 04:00:36 UTC
+
+  [MEDIUM] jdk-17.0.12_windows-x64_bin.exe
+           Path     : C:\Users\USER\Desktop\dfd tool\jdk-17.0.12_windows-x64_bin.exe
+           Category : Desktop
+           Note     : Execution from Desktop — non-standard for legitimate software
+           Source   : UserAssist | Timestamp: 2025-12-09 03:59:17 UTC
+
+
+------------------------------------------------------------------------------
+  9. CHAIN OF CUSTODY STATEMENT
+------------------------------------------------------------------------------
+  All source artifact files were accessed in read-only mode.
+  MD5 and SHA-256 hashes were computed for every source file.
+  No source data was modified during this examination.
+  All operations were logged with UTC timestamps to audit_log.txt.
+
+  This report is auto-generated. All findings must be reviewed by
+  a qualified forensic examiner before use in legal proceedings.
+
+==============================================================================
+  END OF FORENSIC EXAMINATION REPORT
+==============================================================================

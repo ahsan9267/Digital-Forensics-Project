@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>Forensic Timeline Visualization</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#1a1a2e;color:#e0e0e0}
+header{background:linear-gradient(135deg,#1F4E79,#2E75B6);padding:28px 40px}
+header h1{font-size:22px;color:white} header p{color:#b0d0f0;font-size:13px;margin-top:4px}
+.container{max-width:1400px;margin:0 auto;padding:28px 40px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:24px}
+.stat{background:#16213e;border-radius:8px;padding:18px;text-align:center;border-left:4px solid #2E75B6}
+.stat .n{font-size:30px;font-weight:bold} .stat .l{font-size:12px;color:#aaa;margin-top:4px}
+.card{background:#16213e;border-radius:8px;padding:20px;margin-bottom:20px}
+.card h3{font-size:15px;color:#2E75B6;margin-bottom:14px;border-bottom:1px solid #2a2a4e;padding-bottom:8px}
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:20px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:#1F4E79;color:white;padding:8px 10px;text-align:left}
+td{padding:7px 10px;border-bottom:1px solid #2a2a4e}
+tr:nth-child(even) td{background:#0d1b2a}
+footer{text-align:center;color:#555;font-size:11px;padding:20px}
+</style></head><body>
+<header>
+  <h1>📊 Windows Forensic Triage Tool — Interactive Timeline Visualization</h1>
+  <p>Total Events: 3,164 &nbsp;|&nbsp; Windows Forensic Triage Tool v1.0.0 &nbsp;|&nbsp; Riphah International University</p>
+</header>
+<div class="container">
+  <div class="stats"><div class='stat'><div class='n' style='color:#2E75B68'>507</div><div class='l'>Prefetch</div></div><div class='stat'><div class='n' style='color:#70AD478'>185</div><div class='l'>LNK</div></div><div class='stat'><div class='n' style='color:#C000008'>88</div><div class='l'>RecycleBin</div></div><div class='stat'><div class='n' style='color:#FFC0008'>65</div><div class='l'>JumpList</div></div><div class='stat'><div class='n' style='color:#FF66008'>176</div><div class='l'>UserAssist</div></div>
+    <div class="stat"><div class="n">3,164</div><div class="l">Total Events</div></div>
+  </div>
+  <div class="card">
+    <h3>📅 Monthly Forensic Activity — Events by Artifact Source (Stacked Bar Chart)</h3>
+    <canvas id="barChart" height="75"></canvas>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h3>🗑️ Top Deleted Files by Size (Recycle Bin)</h3>
+      <table><tr><th>Filename</th><th>Size (bytes)</th><th>Deletion Time</th></tr><tr><td>sources</td><td>4,845,050,524</td><td>2025-08-21 10:27:37 UTC</td></tr><tr><td>IDS PROJECT</td><td>912,517,266</td><td>2026-04-10 07:53:20 UTC</td></tr><tr><td>OPNsense-26.1-dvd-amd64.iso.bz2</td><td>525,403,329</td><td>2026-02-02 14:15:24 UTC</td></tr><tr><td>OPNsense-26.1-dvd-amd64.iso</td><td>525,403,329</td><td>2026-02-02 13:48:45 UTC</td></tr><tr><td>Wednesday-workingHours.pcap_ISCX.csv</td><td>225,166,395</td><td>2026-04-13 15:20:52 UTC</td></tr><tr><td>Tuesday-WorkingHours.pcap_ISCX.csv</td><td>135,078,995</td><td>2026-04-13 15:20:52 UTC</td></tr><tr><td>MyProjectReportSSD.json</td><td>131,039,751</td><td>2025-12-09 04:32:10 UTC</td></tr><tr><td>Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv</td><td>77,123,859</td><td>2026-04-13 15:20:52 UTC</td></tr><tr><td>Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv</td><td>76,906,168</td><td>2026-04-13 15:20:52 UTC</td></tr><tr><td>Friday-WorkingHours-Morning.pcap_ISCX.csv</td><td>58,316,725</td><td>2026-04-13 15:20:52 UTC</td></tr></table>
+    </div>
+    <div class="card">
+      <h3>🥧 Event Distribution by Source</h3>
+      <canvas id="pieChart" height="180"></canvas>
+      <table style="margin-top:10px"><tr><th>Source</th><th>Count</th><th>%</th></tr><tr><td><span style='display:inline-block;width:10px;height:10px;background:#2E75B6;margin-right:6px;border-radius:2px'></span>Prefetch</td><td>507</td><td>16.0%</td></tr><tr><td><span style='display:inline-block;width:10px;height:10px;background:#70AD47;margin-right:6px;border-radius:2px'></span>LNK</td><td>185</td><td>5.8%</td></tr><tr><td><span style='display:inline-block;width:10px;height:10px;background:#C00000;margin-right:6px;border-radius:2px'></span>RecycleBin</td><td>88</td><td>2.8%</td></tr><tr><td><span style='display:inline-block;width:10px;height:10px;background:#FFC000;margin-right:6px;border-radius:2px'></span>JumpList</td><td>65</td><td>2.1%</td></tr><tr><td><span style='display:inline-block;width:10px;height:10px;background:#FF6600;margin-right:6px;border-radius:2px'></span>UserAssist</td><td>176</td><td>5.6%</td></tr></table>
+    </div>
+  </div>
+  <div class="card">
+    <h3>⚡ Top Executed Programs by Run Count (Prefetch)</h3>
+    <table><tr><th>Executable</th><th>Run Count</th><th>Last Executed (UTC)</th></tr><tr><td>DLLHOST.EXE</td><td>7</td><td>2026-01-12 07:30:57 UTC</td></tr><tr><td>DLLHOST.EXE</td><td>7</td><td>2026-05-07 12:39:12 UTC</td></tr><tr><td>DLLHOST.EXE</td><td>7</td><td>2026-05-06 12:39:24 UTC</td></tr><tr><td>GAMEBAR.EXE</td><td>7</td><td>2026-02-20 03:21:52 UTC</td></tr><tr><td>GAMEBAR.EXE</td><td>7</td><td>2026-04-24 03:44:08 UTC</td></tr><tr><td>GAMEBAR.EXE</td><td>7</td><td>2026-05-01 14:26:09 UTC</td></tr><tr><td>LOCKAPP.EXE</td><td>7</td><td>2026-05-07 04:50:44 UTC</td></tr><tr><td>LOCKAPP.EXE</td><td>7</td><td>2026-03-30 09:40:37 UTC</td></tr><tr><td>LOCKAPP.EXE</td><td>7</td><td>2026-04-15 13:12:20 UTC</td></tr><tr><td>LOCKAPP.EXE</td><td>7</td><td>2026-05-01 19:15:40 UTC</td></tr></table>
+  </div>
+</div>
+<footer>Windows Forensic Triage Tool | Riphah International University | BS Cybersecurity Spring 2026</footer>
+<script>
+const cd={"labels": ["2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2504-12", "2639-07", "2639-09", "2639-10"], "datasets": [{"label": "Prefetch", "data": [0, 0, 0, 0, 0, 0, 8, 20, 7, 13, 13, 68, 378, 0, 0, 0, 0], "backgroundColor": "#2E75B6", "borderColor": "#2E75B6", "borderWidth": 1}, {"label": "LNK", "data": [6, 0, 0, 2, 6, 0, 6, 7, 0, 5, 7, 50, 96, 0, 0, 0, 0], "backgroundColor": "#70AD47", "borderColor": "#70AD47", "borderWidth": 1}, {"label": "RecycleBin", "data": [3, 1, 0, 10, 1, 1, 1, 6, 0, 4, 8, 19, 34, 0, 0, 0, 0], "backgroundColor": "#C00000", "borderColor": "#C00000", "borderWidth": 1}, {"label": "JumpList", "data": [0, 6, 1, 16, 2, 0, 1, 3, 1, 5, 4, 17, 1, 1, 1, 5, 1], "backgroundColor": "#FFC000", "borderColor": "#FFC000", "borderWidth": 1}, {"label": "UserAssist", "data": [5, 4, 3, 0, 2, 5, 31, 16, 7, 19, 16, 39, 29, 0, 0, 0, 0], "backgroundColor": "#FF6600", "borderColor": "#FF6600", "borderWidth": 1}]};
+const pd={"labels": ["Prefetch", "LNK", "RecycleBin", "JumpList", "UserAssist"], "data": [507, 185, 88, 65, 176], "colors": ["#2E75B6", "#70AD47", "#C00000", "#FFC000", "#FF6600"]};
+new Chart(document.getElementById('barChart'),{type:'bar',data:cd,options:{responsive:true,
+  plugins:{legend:{labels:{color:'#e0e0e0',font:{size:11}}}},
+  scales:{x:{stacked:true,ticks:{color:'#aaa'},grid:{color:'#2a2a4e'}},
+           y:{stacked:true,ticks:{color:'#aaa'},grid:{color:'#2a2a4e'}}}
+}});
+new Chart(document.getElementById('pieChart'),{type:'doughnut',
+  data:{labels:pd.labels,datasets:[{data:pd.data,backgroundColor:pd.colors,borderWidth:0}]},
+  options:{responsive:true,plugins:{legend:{display:false}}}
+});
+</script></body></html>
